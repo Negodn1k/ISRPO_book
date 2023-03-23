@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ISRPO_book/css/study-materials.css">
+    <link rel="stylesheet" href="../ISRPO_book/css/materials.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+    <title>ИСРПО</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Инструментальные средства разработки ПО</h1>
+    </header>
+    <section class="section">
+        <h2>Абстрактные классы в Java</h2>
+        
+            • В абстрактном классе, как и в обычном можно определить поля и методы, но в то же время нельзя создать объект или экземпляр абстрактного класса. Абстрактные классы призваны предоставлять базовый функционал для классов-наследников. А производные классы уже реализуют этот функционал.</p>
+            
+            <p>• При определении абстрактных классов используется ключевое слово abstract(public abstract class Human{)<br>
+            Нельзя использовать конструктор абстрактного класса для создания его объекта.<br>
+            • Абстрактный класс может содержать абстрактный метод, который не имеет никакой реализации. Для объявления абстрактного метода используют ключевое слово abstract(public abstract void representation ();)<br>
+            Пример:<br>
+            1)Абстрактный класс Human имеет абстрактный метод representation, который ничего не возвращает, так класс Human является «чертежом» для классов наследников. <br>
+            abstract class Human {</p>
+            
+            <p> String name;<br>
+             int age;</p>
+            
+            <p> public abstract void representation();<br>
+            }</p>
+            
+            <p>2)Публичный класс Vlad является наследником от класса Human. Мы вызываем метод из класса Human, в котором реализуем какую-либо логику.<br>
+            public class Vlad extends Human {<br>
+             public void representation() {<br>
+             System.out.println("Меня зовут Влад!");<br>
+             }<br>
+            }</p>
+            
+            <p>3) В Main-е создаем объект класса Vlad и вызываем метод representation.<br>
+            public class Main {<br>
+             public static void main(String[] args) {<br>
+             Vlad vlad = new Vlad();<br>
+             vlad.representation();<br>
+             }<br>
+            }</p>
+            
+            <p>4) Запускаем программу:<br>
+             <br>
+            </p>
+    </section>
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>

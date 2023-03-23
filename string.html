@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ISRPO_book/css/study-materials.css">
+    <link rel="stylesheet" href="../ISRPO_book/css/materials.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
+    <title>ИСРПО</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Инструментальные средства разработки ПО</h1>
+    </header>
+    <section class="section">
+        <h2>Класс String в Java</h2>
+        <p>Класс String и его составляющие <br>
+            Класс String - Строка представляет собой последовательность символов. Для работы со строками в Java определен класс String, который предоставляет ряд методов для манипуляции строками. Физически объект String представляет собой ссылку на область в памяти, в которой размещены символы.<br>
+            Основные методы класса String<br>
+            concat(): объединяет строки<br>
+            valueOf(): преобразует объект в строковый вид<br>
+            join(): соединяет строки с учетом разделителя<br>
+            сompareTo(): сравнивает две строки<br>
+            charAt(): возвращает символ строки по индексу<br>
+            getChars(): возвращает группу символов<br>
+            equals(): сравнивает строки с учетом регистра<br>
+            equalsIgnoreCase(): сравнивает строки без учета регистра<br>
+            regionMatches(): сравнивает подстроки в строках<br>
+            indexOf(): находит индекс первого вхождения подстроки в строку<br>
+            lastIndexOf(): находит индекс последнего вхождения подстроки в строку<br>
+            startsWith(): определяет, начинается ли строка с подстроки<br>
+            endsWith(): определяет, заканчивается ли строка на определенную подстроку<br>
+            replace(): заменяет в строке одну подстроку на другую<br>
+            trim(): удаляет начальные и конечные пробелы<br>
+            substring(): возвращает подстроку, начиная с определенного индекса до конца или до определенного индекса<br>
+            Операторы + и += для String<br>
+            На языке Java знак плюс (+) означает конкатенацию строк (concatenation), иными словами - объединение строк.<br>
+            String cat = "Кот";<br>
+            String name = "Васька";<br>
+            //складываем две строки и пробел между ними, чтобы слова не слиплись<br>
+            String fullname = cat + "" + name; // получится Кот Васька </p>
+            
+            <p>Если один из операндов в выражении содержит строку, то другие операнды также должны быть строками. Поэтому Java сама может привести переменные к строковому представлению, даже если они не являются строками.</p>
+            
+            <p>int digit = 4;<br>
+            String paws = "лапы";<br>
+            String aboutcat = digit + paws; // хотя мы складываем число и строку, но все равно получим строк<br>
+            Форматирование строк</p>
+            
+            <p>Предположим у нас есть строковый ресурс:</p>
+            
+            <p><string name="aboutcat">У кота по имени Барсик четыре лапы, один хвост. Ему 5 лет</string><br>
+            Чтобы вывести эту строку программно в элементе TextView, можно использовать код:</p>
+            
+            <p>TextView tvCatsInfo = (TextView)findViewById(R.id.textView1);<br>
+            tvCatsInfo.setText(R.string.aboutcat);</p>
+            
+            <p>Представьте себе, что у вас несколько котов. Можно, конечно, завести для каждого кота свою строку. Но ведь строки очень похожи, меняются только имена и возраст. Также можно менять число лап и хвостов (что вы курите?).<br>
+            В таких случаях можно применить форматирование строк. Нужно определить слова, которые мы будем менять и заменить их на специальный набор символов, которые начинаются с символа процента, затем идет число, увеличивающееся на единицу, далее $s для строк или $d для чисел. Итак, изменим наш строковой ресурс так:</p>
+            
+            <p><string name="aboutcat">У кота по имени %1$s %2$s лапы, %3$s хвост. Ему %4$d лет</string><br>
+            Внесём изменения в код:</p>
+            
+            <p>String strBarsik = "Барсик";<br>
+            String strPaws = "четыре";<br>
+            String strTail = "один";<br>
+            int year = 5; <br>
+            String strCats = getResources().getString(R.string.aboutcat); <br>
+            String strFinal = String.format(strCats, strBarsik, strPaws, strTail, year); <br>
+            infoTextView.setText(strFinal);<br>
+            Если вас есть кот Васька и ему шесть лет, то добавляем две переменные и форматируем строку</p>
+            
+            <p>String strVaska = "Васька";<br>
+            year = 6;<br>
+            String strFinal = String.format(strCats, strVaska, strPaws, strTail, year); <br>
+            infoTextView.setText(strFinal);<br>
+            Здесь показан простейший пример с форматированием. Помните о нём и применяйте в нужных местах.</p>
+            
+            <p> <br>
+            Строковой ресурс<br>
+            Строки желательно хранить в ресурсах (о ресурсах есть отдельная статья).<br>
+            Программно доступ к строковому ресурсу делается так:</p>
+            
+            <p>String catName = getResources().getString(R.string.barsik)</p>
+            
+            <p>Извлечь строки из строковых массивов в ресурсах<br>
+            Предположим, у вас есть строковый массив, определённый в файле strings.xml под именем cats_array. Тогда получить доступ к строкам из ресурсов можно так:</p>
+            
+            <p>Resources res = getResources();<br>
+            String[] cats = res.getStringArray(R.array.cats_array);</p>
+            
+            <p>Методы<br>
+            Возвращает символ с указанным смещением в этой строке. Отсчёт идёт от 0. Не надо использовать отрицательные и несуществующие значения, будьте серьёзнее. Для извлечения нескольких символов используйте getChars().</p>
+            
+            <p>String testString = "Котёнок";<br>
+            char myChar = testString.charAt(2);<br>
+            tv.setText(Character.toString(myChar)); // выводит третий символ - </p>
+            
+            <br>
+            <p></p>
+    </section>
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
