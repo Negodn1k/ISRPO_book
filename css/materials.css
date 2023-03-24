@@ -1,5 +1,6 @@
 .section {
-    height: 900vh;
+    /* height: 900vh; */
+    height: max-content;
     font-size: 24px;
     padding: 50px;
 }

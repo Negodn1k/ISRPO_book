@@ -25,6 +25,7 @@ body {
 
 .section {
     height: 300vh;
+    /* height: max-content; */
     background: white;
 }
 
