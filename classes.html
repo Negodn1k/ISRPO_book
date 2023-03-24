@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="css/study-materials.css">
     <link rel="stylesheet" href="../ISRPO_book/css/materials.css">
     <link rel="stylesheet" href="css/materials.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
     <title>ИСРПО</title>
 </head>
 <body>
@@ -20,12 +17,12 @@
     <section class="section">
         <h2>Классы в Java</h2>
 
-        <p>Класс (Свойства, Структура))<br>
+        <p>Класс (Свойства, Структура)<br>
             Класс — это шаблонная конструкция, которая позволяет описать в программе объект, его свойства (атрибуты или поля класса) и поведение (методы класса).<br>
             Свойства Класса<br>
             Поле класса — это переменная, которая описывает какое-либо из свойств данного класса.<br>
             Например:<br>
-            <img src="../ISRPO_book/img/class_theme/first_class.png" class="center-img" alt="">
+            <img src="img/class_theme/first_class.png" class="center-img" alt="">
         </p>
             
             <p>Переменные weight, name и type — поля нашего класса Pet, то есть свойства, которые описывают объект этого класса. Таких полей может быть сколько угодно, каждое имеет свой тип, как обычная переменная.<br>
@@ -37,15 +34,15 @@
             Теперь у нас появилась переменная pet типа Pet, в которой содержится объект класса Pet. Ранее в этом классе мы объявили поля, к которым можно обратиться и занести в них значения.<br>
             Чтобы получить доступ к какому-либо полю нашего класса Pet, нужно специальным образом обратиться к переменной pet — поставить точку и вызвать необходимое поле. Например, вот так:<br>
             
-            <img src="../ISRPO_book/img/class_theme/second_class.png" class="center-img" alt="">
+            <img src="/img/class_theme/second_class.png" class="center-img" alt="">
 
             Теперь во всех трёх полях есть по значению, а мы можем получить их из программы, если потребуется, — например, распечатать в консоль:<br>
             
-            <img src="../ISRPO_book/img/class_theme/fourth_class.png" class="center-img" alt="">
+            <img src="/img/class_theme/fourth_class.png" class="center-img" alt="">
 
             Изменить значение в любом из полей класса также несложно. Пусть наш кот Барсик слегка потолстеет — добавим к его весу 1 кг:<br>
          
-            <img src="../ISRPO_book/img/class_theme/fifth_class.png" class="center-img" alt="">
+            <img src="/img/class_theme/fifth_class.png" class="center-img" alt="">
 
             Как видим, мы просто изменили вес в поле weight, а при выводе получили уже другое значение.<br>
              <br>
@@ -57,23 +54,24 @@
             Пусть первый из них принимает на вход параметр типа int и увеличивает на это значение поле weight (сколько скушал питомец, на столько и потолстел). А после этого печатает в консоль «Я поел» и возвращает новый вес.<br>
             Второй из методов run пусть уменьшает вес на 1, но только если он больше 5, и печатает в консоль: «Я бегу». Иначе, если вес меньше или равен 5: «Я не могу бежать».<br>
 
-            <img src="../ISRPO_book/img/class_theme/sixth_class.png" class="center-img" alt="">
+            <img src="/img/class_theme/sixth_class.png" class="center-img" alt="">
 
             Теперь мы можем вызвать эти методы у объектов класса Pet. Чтобы это сделать, нужно обратиться к объекту, поставить точку и таким способом вызвать необходимый метод.<br>
         
-            <img src="../ISRPO_book/img/class_theme/seventh_class.png" class="center-img" alt="">
+            <img src="/img/class_theme/seventh_class.png" class="center-img" alt="">
 
             Иногда в каком-то методе требуется создать параметр, у которого имя совпадает с именем поля класса. В таких случаях, чтобы обратиться внутри метода именно к полю класса, а не к параметру нашего метода, используется ключевое слово this.<br>
             Для иллюстрации этого создадим метод, setName, который будет устанавливать переданное значение в поле name, а затем сообщать в консоль, что нашего питомца теперь зовут по-другому.<br>
             
-            <img src="../ISRPO_book/img/class_theme/eighth_class.png" class="center-img" alt="">
+            <img src="/img/class_theme/eighth_class.png" class="center-img" alt="">
+            </p>
             
             <p>Работать с классами и объектами в языке Java несложно, но есть несколько важных правил-примечаний, на которые нужно обратить внимание:<br>
             1. Классы создаются в файлах с расширением .java. Главный класс должен называться так же, как имя файла. Например, в файле Main.java — класс Main.<br>
             2. Разные классы в одном проекте могут иметь одинаковые имена, для этого им надо располагаться в разных пакетах (package).<br>
             3. Нельзя создать метод или объявить переменную за пределами классов.<br>
             4. Каждый раз мы начинаем программу со статического метода main, который имеет возвращаемый тип int, а в параметрах у него указана переменная args типа String[] (массив строк).<br>
-             <br>
+            <br>
             </p>
     </section>
     <footer class="footer">
