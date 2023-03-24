@@ -23,7 +23,7 @@ body {
     text-align: right;
 }
 
-.section {
+section {
     height: 300vh;
     background: white;
 }
@@ -68,6 +68,9 @@ body {
 }
 
 .footer {
-    height: 50vh;
+    height: 20vh;
     background: #000000;
+    position: absolute;
+    left: 0;
+    width: 100% ;
 }
