@@ -1,25 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../ISRPO_book/css/study-materials.css">
     <link rel="stylesheet" href="css/study-materials.css">
+    <link rel="stylesheet" href="../ISRPO_book/css/materials.css">
+    <link rel="stylesheet" href="css/materials.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap" rel="stylesheet">
     <title>ИСРПО</title>
 </head>
+
 <body>
     <header class="header">
         <h1>Инструментальные средства разработки ПО</h1>
     </header>
     <section class="section">
-        <h2>Циклы в Java</h2>
+        <h2>Что такое Циклы.</h2>
+
+        <p>
+            Циклы — это разновидность управляющих конструкций для организации многократного
+            выполнения одного и того же участка кода.<br><br>
+
+            Код внутри такой управляющей конструкции выполняется циклично. Каждое выполнение кода — это итерация цикла.
+            Количество итераций регулируется условием цикла. Код, который выполняется внутри цикла, называют телом
+            цикла.<br><br>
+
+            Известны такие виды циклов:<br><br>
+            • Циклы с предусловием: условие выполнения определяется перед первой итерацией.<br><br>
+
+            • Циклы с постусловием: условие выполнения определяется после первой итерации (поэтому они всегда
+            выполняются
+            минимум один раз). Полезны, когда нужно выполнять некое действие, пока не реализуется некое условие:
+            например, считывать ввод пользователя, пока он не введет слово “stop”.<br><br>
+
+            • Циклы со счетчиком: количество итераций определяется смоделированным счетчиком. В условии цикла задается
+            его
+            начальное и конечное значение. Каждую итерацию счетчик наращивается. Мы можем заранее определить количество
+            итераций.<br><br>
+
+            Эти циклы бывают полезны, когда нужно перебрать все элементы в какой-то коллекции. Циклы со счетчиком
+            называют “циклами для...”. “Для каждого элемента некоторой коллекции осуществить следующие
+            действия”.<br><br>
+
+            Допустимы случаи, когда выполнение цикла можно прервать до достижения его условия. Например, если у нас есть
+            коллекция из 100 чисел и нам необходимо понять, содержит ли она отрицательные числа. Мы можем начать перебор
+            всех чисел, используя цикл “для”. Но когда мы найдем первое отрицательное число, нам не обязательно
+            перебирать оставшиеся числа. Мы можем прервать выполнение цикла, если его дальнейшее выполнение не имеет
+            смысла. Подобные ситуации называют прерыванием цикла.<br><br>
+
+            • Безусловные циклы — циклы, которые выполняются бесконечно. Например: “Пока 1=1, печатать “1=1””. Такая
+            программа будет выполняться, пока ее вручную не прервут.<br><br>
+
+            Данные циклы тоже бывают полезны, когда используются вместе с прерыванием цикла “изнутри”. Используйте их
+            осторожно, чтобы не спровоцировать зависание программы.<br><br>
+
+            Подробнее с циклами в языке программирования Java можно познакомиться на 4-ом уровне курса JavaRush. В
+            частности, с циклами while и for.<br><br>
+        </p>
+
+        <h2>Циклы в Java.</h2>
+
+        <p>
+            Теперь рассмотрим циклы в Java. В этом ЯП их есть несколько типов:<br>
+            • while — цикл с предусловием;<br>
+            • do..while — цикл с постусловием;<br>
+            • for — цикл со счетчиком (цикл для);<br>
+            • for each.. — цикл “для каждого…” — разновидность for для перебора коллекции элементов.<br><br>
+
+            while, do.. while и for можно использовать в качестве безусловных циклов.<br><br>
+
+            Сравнить синтаксис циклов в разных языках программирования можно на четвертом уровне обучения курса
+            JavaRush.
+            Например циклов for и while.<br><br>
+
+            Рассмотрим кратко каждый из представленных типов.<br><br>
+        </p>
+
+        <p>
+            Цикл While.<br>
+
+            Этот цикл в Java структурно выглядит так:
+
+            <img src="../ISRPO_book/img/cycles-theme/first_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/first_cycles.png" class="center-img" alt="">
+
+            Здесь:<br>
+            • expression — условие цикла, выражение, которое должно возвращать boolean значение.<br>
+            • statement(s) — тело цикла (одна или более строк кода).<br><br>
+
+            Перед каждой итерацией будет вычисляться значение выражения expression.
+            Если результатом выражения будет true, выполняется тело цикла — statement(s).<br><br>
+
+            Пример:
+
+            <img src="../ISRPO_book/img/cycles-theme/second_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/second_cycles.png" class="center-img" alt="">
+
+            Вывод:
+
+            <img src="../ISRPO_book/img/cycles-theme/three_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/three_cycles.png" class="center-img" alt="">
+
+            Используя while, можно создать бесконечный цикл:
+
+            <img src="../ISRPO_book/img/cycles-theme/four_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/four_cycles.png" class="center-img" alt="">
+
+            Чтобы прервать выполнение цикла, используется оператор break.<br><br>
+
+            Например:
+
+            <img src="../ISRPO_book/img/cycles-theme/five_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/five_cycles.png" class="center-img" alt="">
+
+            Вывод:
+
+            <img src="../ISRPO_book/img/cycles-theme/six_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/six_cycles.png" class="center-img" alt="">
+        </p>
+
+        <p>
+            Цикл do..while.<br>
+
+            Структура do.. while выглядит так:
+
+            <img src="../ISRPO_book/img/cycles-theme/seven_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/seven_cycles.png" class="center-img" alt="">
+
+            Здесь:<br>
+            • expression — условие цикла, выражение, которое должно возвращать boolean значение.<br>
+            • statement(s) — тело цикла (одна или более строк кода).<br><br>
+
+            В отличие от while, значение expression будет вычисляться после каждой итерации.
+            Если результатом выражения будет true, в очередной раз выполнится тело цикла — statement(s) (как минимум
+            раз).<br><br>
+
+            Пример:
+
+            <img src="../ISRPO_book/img/cycles-theme/eight_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/eight_cycles.png" class="center-img" alt="">
+
+            Вывод:
+
+            <img src="../ISRPO_book/img/cycles-theme/nine_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/nine_cycles.png" class="center-img" alt="">
+        </p>
+
+        <p>
+            Цикл for.<br>
+
+            Этот Java цикл выглядит так:
+
+            <img src="../ISRPO_book/img/cycles-theme/ten_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/ten_cycles.png" class="center-img" alt="">
+
+            Здесь:<br>
+            • initialization — выражение, которое инициализирует выполнение цикла. Исполняется только раз в начале цикла.
+            Чаще всего в данном выражении инициализируют счетчик цикла.<br>
+
+            • termination — boolean выражение, которое регулирует окончание выполнения цикла. Если результат выражения
+            будет равен false, цикл for прервется.<br>
+
+            • increment — выражение, которое исполняется после каждой итерации цикла. Чаще всего в данном выражении
+            происходит инкрементирование или декрементирование переменной счетчика.<br>
+
+            • statement(s) — тело цикла.<br><br>
+
+            Выражения initialization, termination, increment опциональны. Если опустить каждое из них, мы получим бесконечный цикл:
+
+            
+            <img src="../ISRPO_book/img/cycles-theme/eleven_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/eleven_cycles.png" class="center-img" alt="">
+
+            Пример цикла for: 
+
+            <img src="../ISRPO_book/img/cycles-theme/twelve_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/twelve_cycles.png" class="center-img" alt="">
+
+            Вывод:
+
+            <img src="../ISRPO_book/img/cycles-theme/thirteen_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/thirteen_cycles.png" class="center-img" alt="">
+        </p>
+
+        <p>
+            Цикл for each.<br>
+
+            Этот цикл Java — разновидность цикла for для итерации коллекций и массивов.<br><br>
+
+            Структура for each выглядит так: 
+
+            <img src="../ISRPO_book/img/cycles-theme/fourteen_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/fourteen_cycles.png" class="center-img" alt="">
+
+            Здесь:<br>
+            • vars — переменная, существующий список или массив<br>
+            • Type var — определение новой переменной того же типа (Type), что и коллекция vars.<br><br>
+
+            Данную конструкцию можно прочитать так: “Для каждого var из vars сделать...”. <br><br>
+
+            Предположим, у нас есть массив строк из названий дней недели. Выведем каждый элемент этого массива на печать: 
+
+            <img src="../ISRPO_book/img/cycles-theme/fifteen_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/fifteen_cycles.png" class="center-img" alt="">
+
+            Вывод: 
+
+            <img src="../ISRPO_book/img/cycles-theme/sixteen_cycles.png" class="center-img" alt="">
+            <img src="img/cycles-theme/sixteen_cycles.png" class="center-img" alt="">
+        </p>
     </section>
     <footer class="footer">
 
     </footer>
 </body>
+
 </html>
