@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+@media only screen and (max-width: 768px) {
+    [class*="body"] {
+        width: 100%;
+    }
+}
+
 body {
     font-family: 'Overpass', sans-serif;
 }
