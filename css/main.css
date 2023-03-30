@@ -85,6 +85,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Overpass', sans-serif;
 }
@@ -97,6 +101,25 @@ body {
 .header {
     height: 100vh;
     background: url(../img/background.jpg) no-repeat top / cover;
+}
+
+.scroll {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    bottom: 350px;
+    right: 200px;
+    display: inline-block;
+    position: absolute;
+    padding:10px 15px;
+    font-size:30px;
+    background:#c04dbc;
+    border-radius:15px;
+    transition: all 0.3s ease;
+    color: aliceblue;
+}
+
+.scroll:hover {
+    background-color: #1c0a95;
 }
 
 .header h1 {
@@ -166,6 +189,10 @@ body {
     body {
         background: black;
         font-family: 'Overpass', sans-serif;
+    }
+    
+    .scroll{
+        display: none;
     }
     
     @font-face {
