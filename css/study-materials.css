@@ -84,3 +84,94 @@ section {
     left: 0;
     width: 100% ;
 }
+
+@media only screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Overpass', sans-serif;
+    }
+    
+    .tabu {
+        white-space: pre-wrap;
+    }
+    
+    @font-face {
+        font-family: 'Overpass', sans-serif;
+        src: url(/fonts/Overpass-Regular.ttf);
+    }
+    
+    .header {
+        height: 300px;
+        width: 100%;
+        background: url(../img/background.jpg) no-repeat top / cover;
+    }
+    
+    .header h1 {
+        color: aliceblue;
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        font-size: 30px;
+        width: 300px;
+        padding-top: 100px;
+        float: left;
+        text-align: left;
+    }
+    
+    section {
+        height: max-content;
+        width: 100%;
+        background: white;
+    }
+    
+    .section h2 {
+        width: 100%;
+        color: #000000;
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .section h3 {
+        font-size: 25px;
+    }
+    
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-block {
+        width: 290px;
+        text-decoration: none;
+        background: #000000;
+        margin: 20px;
+        color: aliceblue;
+        font-size: 15px;
+        border-radius: 10px;
+        padding: 30px;
+        transition: all 0.3s ease; 
+    }
+    
+    .menu-block:hover {
+        background: aliceblue;
+        color: #000000;
+    }
+    
+    .center-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+    
+    .footer {
+        height: 10vh;
+        background: #000000;
+        position: absolute;
+        left: 0;
+        width: 100% ;
+    }
+}
