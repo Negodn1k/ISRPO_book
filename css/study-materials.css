@@ -7,6 +7,10 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 
+.tabu {
+    white-space: pre-wrap;
+}
+
 @font-face {
     font-family: 'Overpass', sans-serif;
     src: url(/fonts/Overpass-Regular.ttf);
