@@ -206,7 +206,7 @@ body {
     background: #000000;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     * {
         margin: 0;
         padding: 0;
@@ -294,4 +294,116 @@ body {
         width: 100%;
         background: black;
     }
+} */
+
+@media screen and (max-width: 767px) {
+    .header {
+      height: 50vh;
+      background-size: cover;
+    }
+    
+    .header h1 {
+      font-size: 36px;
+      width: auto;
+      padding-top: 100px;
+      text-align: center;
+      float: none;
+    }
+  
+    .scroll {
+      display: none;
+    }
+  
+    .section {
+      height: 100vh;
+    }
+  
+    .section h2 {
+      font-size: 36px;
+      padding: 20px;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .block-menu {
+      width: 80%;
+      margin: 10px;
+      height: auto;
+      padding: 20px;
+      justify-content: center;
+    }
+  
+    .block-menu p {
+      font-size: 24px;
+    }
+  
+    .footer {
+      height: 50vh;
+    }
+  }
+  
+  
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header h1 {
+      font-size: 48px;
+      padding-right: 20px;
+      width: 500px;
+      padding-top: 100px;
+      float: none;
+      text-align: center;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .block-menu {
+      width: 400px;
+      height: 150px;
+      margin: 10px;
+      padding: 20px;
+      font-size: 36px;
+    }
+  
+    .block-menu p {
+      font-size: 36px;
+    }
+  
+    .footer {
+      height: 100vh;
+    }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .header h1 {
+    font-size: 60px;
+    padding-right: 30px;
+    width: 800px;
+    padding-top: 150px;
+    }
+    
+    .scroll {
+    bottom: 250px;
+    right: 150px;
+    font-size: 24px;
+    }
+    
+    .section h2 {
+    font-size: 60px;
+    padding: 30px;
+    }
+    
+    .block-menu {
+    width: 350px;
+    height: 150px;
+    font-size: 36px;
+    }
+    
+    .block-menu p {
+    font-size: 36px;
+    }
+    }
