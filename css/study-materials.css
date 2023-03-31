@@ -1,3 +1,22 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.topNubex {
+    display: none;
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding:20px 20px;
+    font-size:20px;
+    background:#c04dbc;
+    border-radius:15px;
+    transition: all 0.3s ease;
+    color: aliceblue;
+}
+
 /* скрываем чекбокс */
 #menu__toggle {
     opacity: 0;
