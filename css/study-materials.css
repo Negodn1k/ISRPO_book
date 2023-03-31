@@ -337,23 +337,28 @@ section {
         left: 20px;
     }
 
+    .header {
+        height: 50vh;
+        background-size: cover;
+    }
+
     .header h1 {
         font-size: 36px;
         padding-top: 100px;
-        width: 100%;
+        width: auto;
         text-align: center;
         float: none;
-        }
+    }
         
-        section {
-        height: auto;
+        .section {
+            height: 100vh;
         }
         
         .section h2 {
-        font-size: 36px;
-        padding: 25px;
+            font-size: 36px;
+            padding: 20px;
         }
-        
+
         .section h3 {
             font-size: 50px; /* уменьшить размер шрифта */
             margin-top: 25px; /* уменьшить отступ сверху */
