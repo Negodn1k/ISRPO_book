@@ -151,7 +151,7 @@
     <a href="#" title="Вернуться к началу страницы" class="topNubex" id="myBtn">
         Вверх</a>
 
-    <script>
+    <!-- <script>
         window.onscroll = function() {scrollFunction()};
         
         function scrollFunction() {
@@ -166,6 +166,48 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-        </script>
+        </script> -->
+
+        <script>
+    window.onscroll = function() {scrollFunction()};
+        
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            if (window.innerWidth >= 768) {
+                document.getElementById("myBtn").style.display = "block";
+            }
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+        
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<style>
+    .topNubex {
+        display: none;
+        position: fixed;
+        right: 45px;
+        bottom: 45px;
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration: none;
+        padding:20px 20px;
+        font-size:20px;
+        background:#c04dbc;
+        border-radius:15px;
+        transition: all 0.3s ease;
+        color: aliceblue;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .topNubex {
+            display: block;
+        }
+    }
+</style>
 </body>
 </html>

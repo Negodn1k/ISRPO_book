@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.topNubex {
+/* .topNubex {
     display: none;
 	position: fixed;
 	right: 45px;
@@ -15,7 +15,7 @@ html {
     border-radius:15px;
     transition: all 0.3s ease;
     color: aliceblue;
-}
+} */
 
 /* скрываем чекбокс */
 #menu__toggle {
@@ -239,7 +239,7 @@ section {
     width: 100% ;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     * {
         margin: 0;
         padding: 0;
@@ -328,4 +328,116 @@ section {
         left: 0;
         width: 100% ;
     }
+} */
+
+@media (max-width: 768px) {
+    .menu__btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+        padding-top: 100px;
+        width: 100%;
+        text-align: center;
+        float: none;
+        }
+        
+        section {
+        height: auto;
+        }
+        
+        .section h2 {
+        font-size: 36px;
+        padding: 25px;
+        }
+        
+        .section h3 {
+            font-size: 50px; /* уменьшить размер шрифта */
+            margin-top: 25px; /* уменьшить отступ сверху */
+            text-align: center; /* выровнять по центру */
+            overflow-wrap: break-word; /* разрешить перенос слов */
+          }
+        
+        .menu {
+        flex-direction: column;
+        }
+        
+        .menu-block {
+            font-size: 16px;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        .center-img {
+        width: 80%;
+        }
+        
+        .footer {
+        height: auto;
+        position: relative;
+    }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* стили для планшетов */
+    .header h1 {
+    font-size: 48px;
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+    padding-top: 100px;
+    }
+    
+    .section h2 {
+    font-size: 48px;
+    }
+    
+    .section h3 {
+    font-size: 56px;
+    }
+    
+    .menu-block {
+    font-size: 16px;
+    padding: 20px;
+    margin: 10px;
+    }
+    
+    .center-img {
+    max-width: 80%;
+    }
+    
+    .footer {
+    height: 10vh;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    /* CSS правила для устройств с разрешением от 1024px до 1440px */
+  
+    .header h1 {
+      font-size: 48px;
+      width: 80%;
+      padding-top: 100px;
+    }
+  
+    .section h2 {
+      font-size: 48px;
+      padding: 20px;
+    }
+  
+    .section h3 {
+      font-size: 60px;
+      margin-top: 30px;
+    }
+  
+    .menu-block {
+      font-size: 16px;
+      padding: 20px;
+    }
+  
+  }
+  
