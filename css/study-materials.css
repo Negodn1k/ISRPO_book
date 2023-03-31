@@ -32,6 +32,9 @@ html {
     height: 26px;
     cursor: pointer;
     z-index: 1;
+    background-color: #fff; /* добавляем цвет фона квадрата */
+    border-radius: 4px; /* добавляем скругление углов */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* добавляем тень */
   }
   /* добавляем "гамбургер" */
   .menu__btn > span,
@@ -51,10 +54,22 @@ html {
   .menu__btn > span::after {
     content: '';
     top: 8px;
-}
-
-/* контейнер меню */
-.menu__box {
+  }
+  /* добавляем квадрат */
+  .menu__btn::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    background-color: #bdbdbd; /* добавляем цвет фона квадрата */
+    z-index: -1;
+    border-radius: 4px; /* добавляем скругление углов */
+  }
+  
+  /* контейнер меню */
+  .menu__box {
     display: block;
     position: fixed;
     visibility: hidden;
@@ -66,7 +81,7 @@ html {
     padding: 80px 0;
     list-style: none;
     text-align: center;
-    background-color: #d5d5d5;
+    background-color: rgba(213, 213, 213, 0.9); /* изменяем цвет фона меню и добавляем прозрачность */
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
   }
   /* элементы меню */
@@ -81,9 +96,9 @@ html {
   }
   .menu__item:hover {
     background-color: #CFD8DC;
-}
-
-#menu__toggle:checked ~ .menu__btn > span {
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
   }
   #menu__toggle:checked ~ .menu__btn > span::before {
@@ -95,9 +110,21 @@ html {
     transform: rotate(90deg);
   }
   #menu__toggle:checked ~ .menu__box {
-    visibility: visible;
-    left: 0;
-} 
+    visibility: visible; /* показываем меню */
+    transition: all 0.3s ease-in-out; /* добавляем плавность анимации */
+    left: 0; /* сдвигаем меню на видимую область */
+    }
+    
+    @media (min-width: 768px) {
+    /* меню скрывается на больших экранах */
+    .menu__box {
+    display: none;
+    }
+    #menu__toggle:checked ~ .menu__box {
+    display: block;
+    }
+}
+  
 
 a {
     text-decoration: none;
